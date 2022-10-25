@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+require('dotenv').config()
 // connect from mongodb
 mongoose.connect(process.env.DATABASE);
 // mongoose.connect('tabase?retryWrites=true&w=majority');
