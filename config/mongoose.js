@@ -1,7 +1,12 @@
 const mongoose = require('mongoose');
 require('dotenv').config()
 // connect from mongodb
-mongoose.connect(process.env.DATABASE);
+mongoose.connect(process.env.DATABASE,
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useCreateIndex: true
+      });
 // mongoose.connect('tabase?retryWrites=true&w=majority');
 
 // aquire connection if it is succesful
