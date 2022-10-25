@@ -3,7 +3,7 @@ const expressLayouts = require("express-ejs-layouts");
 const mongoose = require("mongoose");
 const session = require("express-session");
 const dotenv = require("dotenv"); //require dotenv package
-//dotenv.config({ path: "./.env" }); //import config.env file
+dotenv.config({ path: "./.env" }); //import config.env file
 
 
 const passport = require("passport");
