@@ -9,7 +9,9 @@ mongoose.connect(process.env.MongoDB_URL,
         useNewUrlParser: true,
         useUnifiedTopology: true,
         //useCreateIndex: true
-      });//.then(() => console.log('MongoDB Connected...'))
+      });
+      
+      //.then(() => console.log('MongoDB Connected...'))
       //.catch((err) => console.log(err));
 // mongoose.connect('tabase?retryWrites=true&w=majority');
 
