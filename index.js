@@ -4,13 +4,14 @@ const session = require('express-session');
 const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
 const mongoose = require("mongoose");
+const parser = require('mongo-parse');
 //const session = require("express-session");
 //const dotenv = require("dotenv"); //require dotenv package
 //dotenv.config({ path: "./config.env" }); //import config.env file
 //require('dotenv').config({ path: './.env' });
 
 const msp = require('mongo-parser');
-msp.escape(obj);
+//msp.escape(obj);
 const passport = require("passport");
 const passportLocal = require("./config/passport-local");
 const MongoStore = require("connect-mongo");
@@ -38,7 +39,7 @@ app.set("layout extractStyles", true);
 app.set("layout extractScripts", true);
 
 // middleware for use session cookie
-/*app.use(
+app.use(
   session({
     name: "employeeReview",
     secret: process.env.SECRET,
@@ -49,7 +50,7 @@ app.set("layout extractScripts", true);
     },
     store: MongoStore.create(
       {
-        mongoUrl:   process.env.MONGO_URI,  //process.env.MONGO_URI , //process.env.DATABASE, //"mongodb : //localhost:27017/habit",  
+        mongoUrl:   process.env.MONGO_URL,  //process.env.MONGO_URI , //process.env.DATABASE, //"mongodb : //localhost:27017/habit",  
         autoRemove: "disabled",
       },
       function (err) {
@@ -57,7 +58,7 @@ app.set("layout extractScripts", true);
       }
     ),
   })
-);*/
+);
 
 app.use(passport.initialize());
 app.use(passport.session());

@@ -4,13 +4,13 @@ const msp = require('mongo-parser');
 const parser = require('mongo-parse');
 // connect from mongodb
  //const dataBASE = process.env.DATABASE;
-mongoose.connect(process.env.DATABASE,
+mongoose.connect(process.env.MongoDB_URL,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
-        useCreateIndex: true
-      }).then(() => console.log('MongoDB Connected...'))
-      .catch((err) => console.log(err));
+        //useCreateIndex: true
+      });//.then(() => console.log('MongoDB Connected...'))
+      //.catch((err) => console.log(err));
 // mongoose.connect('tabase?retryWrites=true&w=majority');
 
 // aquire connection if it is succesful
