@@ -4,7 +4,7 @@ const session = require('express-session');
 const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
 const mongoose = require("mongoose");
-const session = require("express-session");
+//const session = require("express-session");
 //const dotenv = require("dotenv"); //require dotenv package
 //dotenv.config({ path: "./config.env" }); //import config.env file
 //require('dotenv').config({ path: './.env' });
@@ -20,7 +20,7 @@ const db = require("./config/mongoose");
 const PORT = process.env.PORT;
 
 const app = express();
-const dbUrl = process.env.DB_URL;
+//const dbUrl = process.env.DB_URL;
 
 // for static files
 app.use(expressLayouts);
@@ -48,7 +48,7 @@ app.use(
     },
     store: MongoStore.create(
       {
-        mongoUrl:  dbUrl, //process.env.DATABASE, //"mongodb : //localhost:27017/habit",  
+        mongoUrl:   process.env.MONGO_URI , //process.env.DATABASE, //"mongodb : //localhost:27017/habit",  
         autoRemove: "disabled",
       },
       function (err) {
