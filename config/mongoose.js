@@ -1,7 +1,5 @@
 require('dotenv').config()
 const mongoose = require('mongoose');
-const msp = require('mongo-parser');
-const parser = require('mongo-parse');
 // connect from mongodb
  //const dataBASE = process.env.DATABASE;
 mongoose.connect(process.env.MongoDB_URL,

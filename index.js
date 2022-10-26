@@ -4,13 +4,11 @@ const session = require('express-session');
 const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
 const mongoose = require("mongoose");
-const parser = require('mongo-parse');
 //const session = require("express-session");
 //const dotenv = require("dotenv"); //require dotenv package
 //dotenv.config({ path: "./config.env" }); //import config.env file
 //require('dotenv').config({ path: './.env' });
 
-const msp = require('mongo-parser');
 const passport = require("passport");
 const passportLocal = require("./config/passport-local");
 const MongoStore = require("connect-mongo").default;
@@ -49,7 +47,7 @@ app.use(
     },
     store: MongoStore.create(
       {
-        mongoUrl:   process.env.MONGO_URL,  //process.env.MONGO_URI , //process.env.DATABASE, //"mongodb : //localhost:27017/habit",  
+        mongoUrl: 'mongodb+srv://SATYAMdcs:Plmokn@cluster0.9kwlibg.mongodb.net/?retryWrites=true&w=majority',  //process.env.MONGO_URI , //process.env.DATABASE, //"mongodb : //localhost:27017/habit",  
         autoRemove: "disabled",
       },
       function (err) {
