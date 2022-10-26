@@ -37,7 +37,7 @@ app.set("layout extractStyles", true);
 app.set("layout extractScripts", true);
 
 // middleware for use session cookie
-app.use(
+/*app.use(
   session({
     name: "employeeReview",
     secret: process.env.SECRET,
@@ -48,7 +48,7 @@ app.use(
     },
     store: MongoStore.create(
       {
-        mongoUrl:  "mongodb : process.env.MONGO_URI",  //process.env.MONGO_URI , //process.env.DATABASE, //"mongodb : //localhost:27017/habit",  
+        mongoUrl:   process.env.MONGO_URI,  //process.env.MONGO_URI , //process.env.DATABASE, //"mongodb : //localhost:27017/habit",  
         autoRemove: "disabled",
       },
       function (err) {
@@ -56,7 +56,7 @@ app.use(
       }
     ),
   })
-);
+);*/
 
 app.use(passport.initialize());
 app.use(passport.session());
