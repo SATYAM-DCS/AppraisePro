@@ -4,8 +4,8 @@ require('dotenv').config()
 mongoose.connect(process.env.DATABASE,
     {
         useNewUrlParser: true,
-        useUnifiedTopology: true,
-        useCreateIndex: true
+       // useUnifiedTopology: true,
+        //useCreateIndex: true
       });
 // mongoose.connect('tabase?retryWrites=true&w=majority');
 
