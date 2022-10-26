@@ -48,7 +48,7 @@ app.use(
     },
     store: MongoStore.create(
       {
-        mongoUrl:  "mongodb : //localhost:27017/habit",  //process.env.MONGO_URI , //process.env.DATABASE, //"mongodb : //localhost:27017/habit",  
+        mongoUrl:  "mongodb : process.env.MONGO_URI",  //process.env.MONGO_URI , //process.env.DATABASE, //"mongodb : //localhost:27017/habit",  
         autoRemove: "disabled",
       },
       function (err) {
