@@ -11,7 +11,7 @@ const mongoose = require("mongoose");
 
 const passport = require("passport");
 const passportLocal = require("./config/passport-local");
-const MongoStore = require("connect-mongo").default;
+const MongoStore = require("connect-mongo").session;
 
 const db = require("./config/mongoose");
 
