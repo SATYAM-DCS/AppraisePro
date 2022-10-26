@@ -3,12 +3,12 @@ const mongoose = require('mongoose');
 
 // connect from mongodb
  //const dataBASE = process.env.DATABASE;
-mongoose.connect(process.env.DATABASE);
-    /*{
+mongoose.connect(process.env.DATABASE,
+    {
         useNewUrlParser: true,
-        useUnifiedTopology: true,
-        useCreateIndex: true
-      });*/
+        //useUnifiedTopology: true,
+        //useCreateIndex: true
+      });
 // mongoose.connect('tabase?retryWrites=true&w=majority');
 
 // aquire connection if it is succesful
