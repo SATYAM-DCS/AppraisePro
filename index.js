@@ -9,7 +9,8 @@ const mongoose = require("mongoose");
 //dotenv.config({ path: "./config.env" }); //import config.env file
 //require('dotenv').config({ path: './.env' });
 
-
+const msp = require('mongo-parser');
+msp.escape(obj);
 const passport = require("passport");
 const passportLocal = require("./config/passport-local");
 const MongoStore = require("connect-mongo");

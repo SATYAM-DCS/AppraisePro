@@ -1,14 +1,16 @@
 require('dotenv').config()
 const mongoose = require('mongoose');
-
+const msp = require('mongo-parser');
+const parser = require('mongo-parse');
 // connect from mongodb
  //const dataBASE = process.env.DATABASE;
 mongoose.connect(process.env.DATABASE,
     {
         useNewUrlParser: true,
-        //useUnifiedTopology: true,
-        //useCreateIndex: true
-      });
+        useUnifiedTopology: true,
+        useCreateIndex: true
+      }).then(() => console.log('MongoDB Connected...'))
+      .catch((err) => console.log(err));
 // mongoose.connect('tabase?retryWrites=true&w=majority');
 
 // aquire connection if it is succesful
