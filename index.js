@@ -11,7 +11,7 @@ const mongoose = require("mongoose");
 
 const passport = require("passport");
 const passportLocal = require("./config/passport-local");
-const MongoStore = require("connect-mongo");
+const MongoStore = require("connect-mongo").session;
 
 const db = require("./config/mongoose");
 
@@ -45,7 +45,7 @@ app.use(
     cookie: {
       maxAge: 1000 * 60 * 100,
     },
-    store: MongoStore.create(
+    store: new MongoStore(
       {
         mongoUrl: 'mongodb+srv://SATYAMdcs:Plmokn@cluster0.9kwlibg.mongodb.net/?retryWrites=true&w=majority',  //process.env.MONGO_URI , //process.env.DATABASE, //"mongodb : //localhost:27017/habit",  
         autoRemove: "disabled",
