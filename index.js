@@ -11,12 +11,12 @@ const mongoose = require("mongoose");
 
 const passport = require("passport");
 const passportLocal = require("./config/passport-local");
-const MongoStore = require("connect-mongodb-session").default;
+const MongoStore = require("connect-mongo");
 
-const db = require("./config/mongoose");
+ const db = require("./config/mongoose");
 
 // const DB = process.env.DATABASE;
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8000;
 
 const app = express();
 //const dbUrl = process.env.DB_URL;
@@ -47,7 +47,7 @@ app.use(
     },
     store: MongoStore.create(
       {
-        mongoUrl: 'mongodb+srv://SATYAMdcs:Plmokn@cluster0.9kwlibg.mongodb.net/?retryWrites=true&w=majority',  //process.env.MONGO_URI , //process.env.DATABASE, //"mongodb : //localhost:27017/habit",  
+        mongoUrl: process.env.MongoDB_URL   || "mongodb : //localhost:27017/habit",  
         autoRemove: "disabled",
       },
       function (err) {
@@ -64,10 +64,11 @@ app.use(passport.setAuthenticatedUser);
 
 app.use("/", require("./routes/index"));
 
-app.listen(process.env.PORT, function (err) {
+app.listen(PORT, function (err) {
   if (err) {
     console.log("Error while connecting to server");
-    return;
+    
+  }else{
+  console.log(`Server running on port ${PORT}.`);
   }
-  console.log(`Server running on port ${process.env.PORT}.`);
 });

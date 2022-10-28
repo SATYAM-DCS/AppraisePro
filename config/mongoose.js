@@ -2,12 +2,16 @@ require('dotenv').config()
 const mongoose = require('mongoose');
 // connect from mongodb
  //const dataBASE = process.env.DATABASE;
-mongoose.connect(process.env.MongoDB_URL,
-    {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
+ mongoose.connect(
+    process.env.MongoDB_URL|| `mongodb://localhost/Employee-Review-System`
+    
+  );
+/*mongoose.connect(process.env.MongoDB_URL,
+   /* {
+        //useNewUrlParser: true,
+        //useUnifiedTopology: true,
         //useCreateIndex: true
-      });
+      }*/
       
       //.then(() => console.log('MongoDB Connected...'))
       //.catch((err) => console.log(err));
