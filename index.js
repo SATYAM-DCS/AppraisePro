@@ -45,7 +45,7 @@ app.use(
     cookie: {
       maxAge: 1000 * 60 * 100,
     },
-    store:  MongoStore.create(
+    store: MongoStore.create(
       {
         mongoUrl: 'mongodb+srv://SATYAMdcs:Plmokn@cluster0.9kwlibg.mongodb.net/?retryWrites=true&w=majority',  //process.env.MONGO_URI , //process.env.DATABASE, //"mongodb : //localhost:27017/habit",  
         autoRemove: "disabled",
