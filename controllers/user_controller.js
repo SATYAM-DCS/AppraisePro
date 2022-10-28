@@ -39,11 +39,17 @@ module.exports.createSession = function (req, res) {
 };
 
 // destroying session
-module.exports.destroySession = function (req, res) {
-  req.logout();
+module.exports.destroySession = function (req, res,next) {
+  req.logout(function(err){
+    if(err){
+      return next(err);
+    }
+  
   console.log("Logeed Out");
   return res.redirect("/users/login");
-};
+});
+}
+
 
 // go to login page
 module.exports.login = function (req, res) {
