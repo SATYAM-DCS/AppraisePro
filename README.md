@@ -33,7 +33,7 @@ Make 1 login for admin and employee
 - Heroku
 
 
-## Deployed on Heroku
+## Deployed on Railway-APP
 
 https://employees-status.up.railway.app/
 
