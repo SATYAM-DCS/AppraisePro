@@ -35,7 +35,7 @@ Make 1 login for admin and employee
 
 ## Deployed on Heroku
 
-https://secret-bayou-03187.herokuapp.com/users/login
+https://employees-status.up.railway.app/
 
 
 
