@@ -1,13 +1,9 @@
 require('dotenv').config() // require .env
 const session = require('express-session');
-//const MongoStore = require('connect-mongo');
 const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
 const mongoose = require("mongoose");
-//const session = require("express-session");
-//const dotenv = require("dotenv"); //require dotenv package
-//dotenv.config({ path: "./config.env" }); //import config.env file
-//require('dotenv').config({ path: './.env' });
+
 
 const passport = require("passport");
 const passportLocal = require("./config/passport-local");

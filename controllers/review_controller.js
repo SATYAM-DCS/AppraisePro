@@ -11,7 +11,7 @@ module.exports.createReview = async function (req, res) {
       return res.redirect("/");
     }
 
-    for (let i = 0; i < recipient.from.length; i++) {
+    for (let i = 0; i < recipient.from.length; i++) {  
       if (req.user) {
         if (recipient.from[i] == req.user.id) {
           const new_review = Review.create({

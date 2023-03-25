@@ -6,7 +6,7 @@ const Review = require("../models/review");
 
 module.exports.adminPage = async function (req, res) {
   if (!req.isAuthenticated()) {
-    return res.redirect("/users/login");
+    return res.redirect("/users/login"); 
   } else {
     if (req.user.isAdmin == false) {
       console.log("You are not an admin");
