@@ -35,7 +35,7 @@ Make 1 login for admin and employee
 
 ## Deployed on Railway-APP
 
-https://employees-status.up.railway.app/
+https://silver-bee-tam.cyclic.app/users/register
 
 
 
